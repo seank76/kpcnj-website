@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html ng-app="pcnjApp">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="stylesheet" type="text/css" href="css/css.css"/>
+    <link rel="stylesheet" type="text/css" href="css/menu.css"/>
+    <script src="js/angular/angular.js"></script>
+    <script src="js/angular/angular-route.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/controllers.js"></script>
+    <title>뉴저지장로교회</title>
+</head>
+
+<body>
+<div id="topwrapper">
+    <div id="logowrapper"><a href="/home"><img src="img/logo.jpg" border=0/></a></div>
+    <div id="login">
+        <ul>
+            <li>
+                <a href="{getUrl('act','dispMemberLogout')}">로그아웃</a>
+                <a href="/index.php?act=dispMemberLoginForm" accesskey="L" class="openLogin">로그인</a>
+            </li>
+            <li>
+                <a href="/?act=dispMemberInfo">내정보</a>
+                <a href="/?act=dispMemberSignUpForm">회원가입</a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<!-- Main menu -->
+<nav id="mainNav">
+    <ul class="navigation">
+        <li style="background: orange;"><a href="#/intro">교회안내 홈</a></li>
+        <li style="background: blue;"><a href="#/broadcast">PCNJ방송 홈</a></li>
+        <li style="background: purple;"><a href="#/forum">PCNJ광장 홈</a></li>
+    </ul>
+</nav>
+
+<!-- Content -->
+<BR>
+
+<div ng-view></div>
+<BR>
+<!------------->
+
+<!-- Footer -->
+<div id="footer">
+    <div class="address">
+        <h3>팰리세이즈팍 예배당</h3>
+        500 Broad Ave.<br>
+        Palisades Park NJ 07650<br>
+        Tel: 201-944-5756<br>
+    </div>
+    <div class="address">
+        <h3>오클랜드 예배당</h3>
+        222 Ramapo Valley Rd.<br>
+        Oakland NJ 07436<br>
+        Tel: 201-337-1313<br>
+        Fax: 201-322-0088<br>
+    </div>
+</div>
+<div id="copyright">Copyright (c) The Presbyterian Church of New Jersey. All rights reserved.</div>
+<!------------------------------------->
+</body>
+</html>
